@@ -14,6 +14,13 @@ const router = new Router({
 })
 const LOGIN_PAGE_NAME = 'login'
 
+const originalPush = Router.prototype.push
+Router.prototype.push = function push (location, onResolve, onReject) {
+  if (onResolve || onReject) return originalPush.call(this, location, onResolve, onReject)
+  return originalPush.call(this, location).catch(err => err)
+}
+// 解决新版router需要在调用时多次使用catch捕获异常，控制台报错问题
+
 const turnTo = (to, access, next) => {
   if (canTurnTo(to.name, access, routes)) next() // 有权限，可访问
   else next({ replace: true, name: 'error_401' }) // 无权限，重定向到401页面

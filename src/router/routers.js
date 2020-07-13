@@ -108,6 +108,15 @@ export default [
     component: Main,
     children: [
       {
+        path: '/menu',
+        name: 'menu',
+        meta: {
+          icon: 'md_cloud-upload',
+          title: '菜单'
+        },
+        component: () => import('@/view/components/menu-test/menu.vue')
+      },
+      {
         path: 'tree_select_page',
         name: 'tree_select_page',
         meta: {

@@ -8,6 +8,7 @@ export default {
   markdown_page: 'Markdown-editor',
   editor_page: 'Rich-Text-Editor',
   icons_page: 'Custom-icon',
+  menu_page: 'abc',
   img_cropper_page: 'Image-editor',
   update: 'Update',
   doc: 'Document',

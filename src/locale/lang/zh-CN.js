@@ -8,6 +8,7 @@ export default {
   markdown_page: 'Markdown编辑器',
   editor_page: '富文本编辑器',
   icons_page: '自定义图标',
+  menu: '菜单',
   img_cropper_page: '图片编辑器',
   update: '上传数据',
   join_page: 'QQ群',

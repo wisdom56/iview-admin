@@ -99,6 +99,69 @@ export default [
     ]
   },
   {
+    path: '/statistics',
+    name: 'statistics',
+    meta: {
+      icon: 'md_cloud-upload',
+      title: '查询统计'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'profit_statistics',
+        name: 'profit_statistics',
+        meta: {
+          icon: '',
+          title: '利润统计'
+        },
+        component: () => import('@/view/statistics/profit-statistics.vue')
+      },
+      {
+        path: 'profit_detail_statistics',
+        name: 'profit_detail_statistics',
+        meta: {
+          icon: '',
+          title: '利润详情统计'
+        },
+        component: () => import('@/view/statistics/statistics-search-info.vue')
+      },
+      {
+        path: 'test',
+        name: 'test',
+        meta: {
+          icon: '',
+          title: '测试'
+        },
+        componenet: () => import('@/components/modal-shipp-company/index')
+      }
+    //   {
+    //     path: 'arrears-statistics',
+    //     name: 'arrears-statistics',
+    //     meta: {
+    //         icon: '',
+    //         title: '欠费统计'
+    //     },
+    //     component: () => import('@/view/statistics/arrears-statistics.vue')
+    //    }
+    //   {
+    //     path: '',
+    //     name: '',
+    //     meta: {
+
+    //     },
+    //     component: () => import('')
+    //   },
+    //   {
+    //     path: '',
+    //     name: '',
+    //     meta: {
+
+    //     },
+    //     component: () => import('')
+    //   }
+    ]
+  },
+  {
     path: '/components',
     name: 'components',
     meta: {

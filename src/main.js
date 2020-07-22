@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import store from './store'
 import iView from 'iview'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import i18n from '@/locale'
 import config from '@/config'
 import importDirective from '@/directive'
@@ -24,6 +26,7 @@ if (process.env.NODE_ENV !== 'production') require('@/mock')
 Vue.use(iView, {
   i18n: (key, value) => i18n.t(key, value)
 })
+Vue.use(ElementUI);
 Vue.use(TreeTable)
 Vue.use(VOrgTree)
 /**

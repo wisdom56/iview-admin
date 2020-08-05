@@ -4,9 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-import iView from 'iview'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import ViewUI from 'view-design'
 import i18n from '@/locale'
 import config from '@/config'
 import importDirective from '@/directive'
@@ -23,8 +23,14 @@ import 'v-org-tree/dist/v-org-tree.css'
 /* eslint-disable */
 if (process.env.NODE_ENV !== 'production') require('@/mock')
 
-Vue.use(iView, {
-  i18n: (key, value) => i18n.t(key, value)
+Vue.use(ViewUI, {
+  transfer: true,
+  size: 'large',
+  capture: false,
+  select: {
+    arrow: 'md-arrow-dropdown',
+    arrowSize: 20
+  }
 })
 Vue.use(ElementUI);
 Vue.use(TreeTable)
